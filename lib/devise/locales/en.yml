@@ -2,6 +2,7 @@ en:
   devise:
     sessions:
       signed_in: 'Signed in successfully.'
+      signed_up: 'Signed up successfully.'
       signed_out: 'Signed out successfully.'
       unauthenticated: 'You need to sign in or sign up before continuing.'
       unconfirmed: 'You have to confirm your account before continuing.'

@@ -116,7 +116,7 @@ This is going to look inside you User model and create a set of needed routes (y
 
 There are also some options available for configuring your routes, as :class_name (to set the class for that route), :as and :path_names, where the last two have the same meaning as in common routes. The available :path_names are:
 
-  map.devise_for :users, :as => "usuarios", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification' }
+  map.devise_for :users, :as => "usuarios", :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register', :password => 'secret', :confirmation => 'verification' }
 
 Be sure to check devise_for documentation for detailed description.
 

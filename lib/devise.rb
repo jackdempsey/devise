@@ -30,6 +30,7 @@ module Devise
   # Maps controller names to devise modules
   CONTROLLERS = {
     :sessions => [:authenticatable],
+    :sign_up => [:authenticatable],
     :passwords => [:recoverable],
     :confirmations => [:confirmable]
   }

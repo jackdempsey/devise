@@ -103,6 +103,10 @@ module ActionController::Routing
             session.send(:"#{mapping.name}_session",         mapping.path_names[:sign_in],  :action => 'create',  :conditions => { :method => :post })
             session.send(:"destroy_#{mapping.name}_session", mapping.path_names[:sign_out], :action => 'destroy', :conditions => { :method => :get })
           end
+          routes.with_options(:controller => 'sign_up', :name_prefix => nil) do |sign_up|
+            sign_up.send(:new_sign_up,         mapping.path_names[:sign_up],  :action => 'new',  :conditions => { :method => :get })
+            sign_up.send(:sign_up, mapping.path_names[:sign_up], :action => 'create', :conditions => { :method => :post })
+          end
         end
 
         def recoverable(routes, mapping)
